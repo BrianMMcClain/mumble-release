@@ -1,0 +1,16 @@
+---
+packages:
+- name: mumble
+  version: 96ecaafaebf3a1ced0e0f76f4c9989d01145f8a3
+  fingerprint: 96ecaafaebf3a1ced0e0f76f4c9989d01145f8a3
+  sha1: f9b992b10a8b75c262d51450f5a4391576b1c974
+  dependencies: []
+jobs:
+- name: mumble
+  version: cfa5f72213d94a8ac4586496f341a5afe0a47fba
+  fingerprint: cfa5f72213d94a8ac4586496f341a5afe0a47fba
+  sha1: 8746298edf7b5bc8d78df35c39b1849e6927eebf
+commit_hash: '00000000'
+uncommitted_changes: true
+name: mumble
+version: '1'

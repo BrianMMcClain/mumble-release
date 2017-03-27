@@ -1,0 +1,7 @@
+# abort script on any command that exits with a non zero value
+set -e
+
+tar xf mumble/murmur-static_x86-1.2.19.tar.bz2
+pushd murmur-static_x86-1.2.19
+	mv * $BOSH_INSTALL_TARGET
+popd

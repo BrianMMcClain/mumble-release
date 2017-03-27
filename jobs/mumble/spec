@@ -1,0 +1,7 @@
+---
+name: mumble
+templates:
+ ctl.erb: bin/ctl
+
+packages:
+- mumble

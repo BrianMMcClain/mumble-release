@@ -1,0 +1,40 @@
+---
+name: mumble_deployment
+director_uuid: 63ddb6a6-d6fe-40e1-b16b-2ff6b2034c79
+
+releases:
+- {name: mumble, version: latest}
+
+resource_pools:
+- name: vms
+  network: default
+  stemcell:
+    name: bosh-warden-boshlite-ubuntu-trusty-go_agent
+    version: 3363.12
+  cloud_properties:
+    instance_type: m1.small
+
+networks:
+- {name: default, type: dynamic}
+
+compilation:
+  workers: 1
+  network: default
+  reuse_compilation_vms: true
+  cloud_properties:
+    instance_type: m1.small
+
+update:
+  canaries: 1
+  max_in_flight: 3
+  canary_watch_time: 15000-30000
+  update_watch_time: 15000-300000
+
+jobs:
+- name: mumble
+  instances: 1
+  templates:
+  - {name: mumble, release: mumble}
+  resource_pool: vms
+  networks:
+  - name: default
