@@ -36,3 +36,5 @@ jobs:
   resource_pool: vms
   networks:
   - name: default
+  properties:
+    port: 64738

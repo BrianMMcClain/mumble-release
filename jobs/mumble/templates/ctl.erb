@@ -16,7 +16,7 @@ case $1 in
 
     export PATH=/var/vcap/packages/ruby_1.9.3/bin:$PATH
 
-    exec  ./murmur.x86 -fg \
+    exec  ./murmur.x86 -fg -ini /var/vcap/jobs/mumble/config/murmur.ini \
       >>  $LOG_DIR/mumble.stdout.log \
       2>> $LOG_DIR/mumble.stderr.log
 
