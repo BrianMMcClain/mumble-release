@@ -2,6 +2,12 @@
 name: mumble
 templates:
  ctl.erb: bin/ctl
+ murmur.ini.erb: murmur.ini
 
 packages:
 - mumble
+
+properties:
+  port:
+    description: "Port on which server is listening"
+    default: 64738
